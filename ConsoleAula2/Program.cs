@@ -6,6 +6,8 @@ namespace ConsoleAula2
 {
     class Program
     {
+        private static string nome1;
+
         static void Main(string[] args)
         {
             //Console.WriteLine("SOMA DE DOIS NUMEROS");
@@ -73,7 +75,7 @@ namespace ConsoleAula2
             //    Console.WriteLine("Indique a Senha:");
             //    senha = int.Parse(Console.ReadLine());
 
-            //    // conferir que seja numérica
+            //    // -->> Falta conferir que seja numérica
 
             //    if (senha == 2002)
             //    {
@@ -89,74 +91,134 @@ namespace ConsoleAula2
 
             // _______________________________________________________________________________________________________________
 
-            Console.WriteLine("NÚMERO IMPARES");
+            //Console.WriteLine("NÚMERO IMPARES");
 
-            int numero;
-            bool impreso = false;
-            string entrada;
+            //int numero;
+            //bool impreso = false;
+            //string entrada;
 
-            Console.WriteLine("Indicar um número");
+            //Console.WriteLine("Indicar um número");
 
-            // conferir se é um número inteiro
+            //// -->> falta conferir se é um número inteiro
 
-            // conferir que seja maior que 0 e menor que 1000
+            //// conferir que seja maior que 0 e menor que 1000
 
-            numero = int.Parse(Console.ReadLine());
-            if (0 <= numero && numero <= 1000)
-            {
+            //numero = int.Parse(Console.ReadLine());
+            //if (0 <= numero && numero <= 1000)
+            //{
 
-                for (int i = 0; i <= numero; i++)
-                {
-                    if (!impreso)
-                    {
-                        entrada = "Entrada: " + numero;   // nao consigo que imprima a palavra "Entrada"
-                        impreso = true;
-                        Console.WriteLine(entrada);
+            //    for (int i = 0; i <= numero; i++)
+            //    {
+            //        if (!impreso)
+            //        {
+            //            entrada = "Entrada: " + numero;  
+            //            impreso = true;
+            //            Console.WriteLine(entrada);
 
-                    }
-                    else
-                    {
-                        entrada = null;
-                    }
-                    if (i % 2 != 0)
-                    {
-                      //  entrada = entrada + Convert.ToString(i);
-                        Console.WriteLine(entrada + Convert.ToString(i));
-                    }
-                }
-            }
+            //        }
+            //        else
+            //        {
+            //            entrada = null;
+            //        }
+            //        if (i % 2 != 0)
+            //        {
+            //          //  entrada = entrada + Convert.ToString(i);
+            //            Console.WriteLine(entrada + Convert.ToString(i));
+            //        }
+            //    }
+            //}
 
+            // __________________________________________________________________________________________________________________
 
             // MOSTRAR DADOS DA PESSOA MAIS VELHA
 
-            string nome1, nome2, pessoaMaior;
-            byte idade1, idade2, idadeMaior;
-            string[] nome;
-            int n = 2;
-            int[] idade;
-            bool primeiro = false;
+            //string nome1, pessoaMaior = null;
+            //byte idade1, idadeMaior = 0;
+            //string[] nome = { null, null };
+            //int n = 2;
+            //int[] idade = { 0, 0 };
+            //bool primeiro = false;
 
+            //for (int i = 0; i < n; i++)
+            //{
+            //    Console.WriteLine("Favor indicar nome");
+            //    nome1 = Console.ReadLine();
+            //    nome[i] = nome1; 
+            //    Console.WriteLine("Favor indicar idade de " + nome1);
+
+            // Falta verificar que idade seja numerica
+
+            //    idade1 = byte.Parse(Console.ReadLine());
+            //    idade[i] = idade1;
+
+
+            //    if (!primeiro)
+            //    {
+            //        pessoaMaior = nome1;
+            //        idadeMaior = idade1;
+            //        primeiro = true;
+            //    }
+            //    else
+            //    {
+            //        if (idade1 > idadeMaior) 
+            //        {
+            //            idadeMaior = idade1;
+            //            pessoaMaior = nome1;
+
+            //        }
+            //    }
+
+
+            //}
+
+            //for (int i = 0; i < n; i++)
+
+            //    Console.WriteLine("Pessoa " + (i+1) + " Nome: " + nome[i] + " idade: " + idade[i]);
+            //{
+
+            //}
+
+            //Console.WriteLine("Pessoa de mais idade: " + pessoaMaior + " com " + idadeMaior + " anos");
+
+
+            // __________________________________________________________________________________________________________________
+
+            // SALARIO MEDIO DE DOIS FUNCIONARIOS
+
+            string funcionario1 = null;
+            int salario1 = 0;
+            double promedio = 0;
+            string[] funcionario = { null, null };
+            int n = 2;
+            int[] salario = { 0, 0 }; // deve ser double
+            
+            // falta conferir salario numerico
             for (int i = 0; i < n; i++)
             {
-                Console.WriteLine("Favor indicar nome");
-                nome[i] = Console.ReadLine();
+                Console.WriteLine("Favor indicar nome do funcionario");
+                funcionario1 = Console.ReadLine();
+                funcionario[i] = funcionario1;
+                Console.WriteLine("Favor indicar salario de " + nome1);
 
-                Console.WriteLine("Favor indicar idade de " + nome[i]);
-                idade1 = byte.Parse(Console.ReadLine());
-
-                if (!primeiro)
-                {
-                    nome1 = nome[i];
-                    primeiro = true;
-                }
-                else
-                {
-                    if (nome[i] > nome1)
-                    {
-
-                    }
-                }
+                // fazer conversao adecuada (para dou=ble com 2 casas decimais
+                salario1 = int.Parse(Console.ReadLine());    
+                salario[i] = salario1;
+                
+            promedio += salario[i];
             }
+
+            for (int i = 0; i < n; i++)
+
+                Console.WriteLine("Pessoa " + (i + 1) + " Nome: " + funcionario[i] + " salario: " + salario[i]);
+            {
+
+            }
+
+            Console.WriteLine("Salario medio: " + (promedio/n));
+
+
+
+
         }
 
     }
